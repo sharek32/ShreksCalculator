@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
-    <link rel="stylesheet "href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -14,7 +14,7 @@
             </div>
             <div class="calc-button-row">
                 <div class="button c">C</div>
-                <div class="button">/</div>
+                <div class="button">÷</div> 
                 <div class="button">x</div>
                 <div class="button">←</div>
             </div>
@@ -42,6 +42,7 @@
             </div>
         </div>
     </div>
+
     <script>
         const display = document.getElementById('calc-display');
         const buttons = document.querySelectorAll('.button');
@@ -56,7 +57,7 @@
                     display.value = display.value.slice(0, -1);
                 } else if (value === '=') {
                     try {
-                        display.value = eval(display.value.replace(/x/g, '*'));
+                        display.value = eval(display.value.replace(/x/g, '*').replace(/÷/g, '/'));
                     } catch {
                         display.value = 'Error';
                     }
@@ -68,6 +69,17 @@
                 display.scrollLeft = display.scrollWidth;
             });
         });
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
     </script>
+    <link rel="manifest" href="/manifest.json">
 </body>
 </html>
