@@ -15,7 +15,7 @@ Clone this repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/calculator-by-ai.git
+git clone https://sharek32.github.io/ShreksCalculator/
 Open the HTML file:
 
 Open index.html in your preferred web browser to start using the calculator.
