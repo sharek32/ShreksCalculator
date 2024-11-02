@@ -49,6 +49,19 @@
         let calcDisplay = document.getElementById('calc-display');
         let calcButtons = document.querySelectorAll('.button');
 
+        function adjustFontSize() {
+            const length = calcDisplay.value.length;
+            if (length < 10) {
+                calcDisplay.style.fontSize = '45px';
+            } else if (length < 15) {
+                calcDisplay.style.fontSize = '35px';
+            } else if (length < 20) {
+                calcDisplay.style.fontSize = '25px';
+            } else {
+                calcDisplay.style.fontSize = '20px';
+            }
+        }
+
         calcButtons.forEach(button => {
             button.addEventListener('click', () => {
                 beepSound.play(); // Play the beep sound when a button is clicked
@@ -72,6 +85,7 @@
                     default:
                         calcDisplay.value += buttonText;
                 }
+                adjustFontSize(); // Adjust font size based on the length of display text
             });
         });
     </script>
