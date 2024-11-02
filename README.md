@@ -1,6 +1,9 @@
 Calculator by AI
 A web-based calculator designed for performing basic arithmetic operations. This calculator has a modern interface and includes sound feedback for a more interactive experience.
+Screenshots
 
+Calculator Interface
+[ https://i.imghippo.com/files/feZs4305zg.png ]
 Features
 Basic Arithmetic Operations: Addition, subtraction, multiplication, and division
 Special Functions:
@@ -15,8 +18,8 @@ Clone this repository:
 
 bash
 Copy code
-git clone https://sharek32.github.io/ShreksCalculator/
-Open the HTML file:
+ https://sharek32.github.io/ShreksCalculator/
+ Open the HTML file:
 
 Open index.html in your preferred web browser to start using the calculator.
 Usage
